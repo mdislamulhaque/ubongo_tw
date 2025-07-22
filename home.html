@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Ubongo Kids - The All New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#0f0f0f] w-full">
+    <!-- Header Section -->
+    <header class="py-4 px-6 shadow-lg relative w-full">
+      <div class="container mx-auto flex justify-between items-center w-full">
+        <div class="space-y-2">
+          <h1 class="text-2xl md:text-3xl font-bold text-white">Saladina TV</h1>
+        </div>
+        <div class="flex items-center space-x-6">
+          <div class="hidden md:flex space-x-4">
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Home</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Shows</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Login</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >SignUp</a
+            >
+          </div>
+          <!-- Language Dropdown -->
+          <div class="relative group">
+            <input type="checkbox" id="lang-toggle" class="hidden peer" />
+            <label
+              for="lang-toggle"
+              class="flex items-center space-x-1 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full px-3 py-1 transition cursor-pointer"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/44/44386.png"
+                alt="Earth"
+                class="w-5 h-5"
+              />
+              <span class="text-white text-sm font-medium">EN</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-white transition-transform duration-200 peer-checked:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </label>
+            <div
+              class="absolute right-0 mt-2 w-32 bg-white rounded-md shadow-lg z-40 hidden peer-checked:block"
+            >
+              <div class="py-1">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >English</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Swahili</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >Français</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="md:hidden text-white focus:outline-none"
+          id="mobile-menu-button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu with sliding animation -->
+      <div
+        class="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-lg transform origin-top transition-all duration-300 ease-out scale-y-0 -translate-y-full z-30"
+        id="mobile-menu"
+      >
+        <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Shows</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >SignUp</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="text-white font-sans w-full">
+      <!-- Video Player -->
+      <div
+        class="mx-auto px-4 py-6 w-full md:w-11/12 flex items-start justify-between gap-12"
+      >
+        <div class="aspect-video w-full md:w-9/12 h-auto md:h-[70vh]">
+          <!-- <video controls skip="true" class="w-full h-full">
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video> -->
+          <iframe
+            class="w-full h-full rounded-md"
+            src="https://www.youtube.com/embed/zEcrJZmYUBY"
+            title=""
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div
+          class="w-3/12 hidden md:block -me-6"
+        >
+         <h3 class="text-xl font-semibold  mb-1 px-3">Most View</h3>
+         <div class="w-full px-3 py-2 space-y-3 h-[70vh] overflow-auto scroll-smooth scrollbar-hide">
+           <div class="w-[300px] hover:scale-105 duration-300 cursor-pointer">
+            <img
+              src="./assets/home.jpg"
+              alt=""
+              class="w-[300px] h-48 rounded-md"
+            />
+          </div>
+          <div class="w-[300px] hover:scale-105 duration-300 cursor-pointer">
+            <img
+              src="./assets/1.jpg"
+              alt=""
+              class="w-[300px] h-48 rounded-md"
+            />
+          </div>
+          <div class="w-[300px] hover:scale-105 duration-300 cursor-pointer">
+            <img
+              src="./assets/2.jpg"
+              alt=""
+              class="w-[300px] h-48 rounded-md"
+            />
+          </div>
+          <div class="w-[300px] hover:scale-105 duration-300 cursor-pointer">
+            <img
+              src="./assets/3.jpg"
+              alt=""
+              class="w-[300px] h-48 rounded-md"
+            />
+          </div>
+         </div>
+          
+        </div>
+      </div>
+
+      <!-- Slider Section -->
+      <div class="container mx-auto px-4 space-y-10 w-full">
+        <!-- Hardcoded Sections -->
+        <div class="space-y-10 w-full md:w-11/12 mx-auto">
+          <!-- Repeat for Each Section -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold">Ubongo Kids</h3>
+            <div class="relative pointer-events-none">
+              <button
+                onclick="scrollSliderLeft('ubongo')"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10094;
+              </button>
+              <div
+                id="ubongo"
+                class="slider flex space-x-4 overflow-x-auto  pointer-events-auto py-2 "
+              >
+                <img
+                  src="./assets/5.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/6.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/home.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/7.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/8.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/9.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/10.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                
+              </div>
+              <button
+                onclick="scrollRight('ubongo')"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+
+          <!-- Repeat other sections similarly -->
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold">Akili & Me</h3>
+            <div class="relative pointer-events-none">
+              <button
+                onclick="scrollSliderLeft('akili')"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10094;
+              </button>
+              <div
+                id="akili"
+                class="slider flex space-x-4 overflow-x-auto py-2  pointer-events-auto"
+              >
+               <img
+                  src="./assets/10.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/9.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/8.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/7.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/home.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/1.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/2.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+              </div>
+              <button
+                onclick="scrollRight('akili')"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold">Nuzo & Namia</h3>
+            <div class="relative pointer-events-none">
+              <button
+                onclick="scrollSliderLeft('nuzo')"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10094;
+              </button>
+              <div
+                id="nuzo"
+                class="slider flex space-x-4 overflow-x-auto py-2  pointer-events-auto"
+              >
+                <img
+                  src="./assets/6.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/4.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/2.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/5.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/home.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/1.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+                <img
+                  src="./assets/9.jpg"
+                  class="min-w-[300px] h-48 object-cover rounded hover:scale-105 duration-300 cursor-pointer"
+                />
+              </div>
+              <button
+                onclick="scrollRight('nuzo')"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white py-6 px-4">
+      <div class="text-center mt-12">
+        <p class="text-lg font-semibold">Watch from anywhere anytime 24/7</p>
+        <h2 class="text-2xl font-bold mt-2 text-yellow-400">SaladinaTV</h2>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" aria-label="Facebook">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+              alt="Facebook"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="#" aria-label="Instagram">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+              alt="Instagram"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+              alt="LinkedIn"
+              class="w-6 h-6"
+            />
+          </a>
+          <a href="#" aria-label="YouTube">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+              alt="YouTube"
+              class="w-6 h-6"
+            />
+          </a>
+        </div>
+        <div class="flex justify-center mt-6 space-x-4">
+          <a href="#">
+            <img
+              src="./assets/app-store.png"
+              alt="Download on the App Store"
+              class="h-10 w-32 object-contain rounded-md border-2 border-gray-300 hover:scale-105 transform duration-300"
+            />
+          </a>
+
+          <a href="#">
+            <img
+              src="./assets/google-play-store.png"
+              class="h-30 w-32 object-contain rounded-md border-2 border-gray-300 hover:scale-105 transform duration-300"
+              alt="Google Play"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll JS -->
+    <script>
+      function scrollSliderLeft(id) {
+        const slider = document.getElementById(id);
+        slider.scrollBy({ left: -304, behavior: "smooth" });
+      }
+      function scrollRight(id) {
+        const slider = document.getElementById(id);
+        slider.scrollBy({ left: 304, behavior: "smooth" });
+      }
+    </script>
+    <script>
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      let menuOpen = false;
+
+      mobileMenuButton.addEventListener("click", () => {
+        if (menuOpen) {
+          // Close menu - slide up
+          mobileMenu.classList.remove("scale-y-100", "translate-y-0");
+          mobileMenu.classList.add("scale-y-0", "-translate-y-full");
+        } else {
+          // Open menu - slide down
+          mobileMenu.classList.remove("scale-y-0", "-translate-y-full");
+          mobileMenu.classList.add("scale-y-100", "translate-y-0");
+        }
+        menuOpen = !menuOpen;
+      });
+    </script>
+  </body>
+</html>

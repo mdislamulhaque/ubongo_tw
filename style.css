@@ -1,0 +1,39 @@
+body {
+  font-family: "Comic Neue", cursive;
+  background-color: #f0f9ff;
+}
+.ubongo-gradient {
+  background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45aaf2);
+}
+.btn-primary {
+  background-color: #1c29b8;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #1d10ce;
+  transform: translateY(-2px);
+}
+.btn-secondary {
+  background-color: #079632;
+  transition: all 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: #005d09;
+  transform: translateY(-2px);
+}
+.slider {
+  scroll-behavior: smooth;
+}
+.slider::-webkit-scrollbar {
+  display: none;
+}
+/* In your global CSS file */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  margin-right: -30px;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
