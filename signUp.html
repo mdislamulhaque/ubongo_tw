@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Ubongo Kids - The All New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#0f0f0f] max-w-7xl mx-auto">
+    <!-- Header Section -->
+    <header class="py-4 px-6 shadow-lg relative w-full">
+      <div class="container mx-auto flex justify-between items-center w-full">
+        <div class="space-y-2">
+          <a
+            href="./home.html"
+            class="block text-2xl md:text-3xl font-bold text-yellow-400"
+            >SaladinaTV</a
+          >
+        </div>
+        <div class="flex items-center space-x-6">
+          <div class="hidden md:flex space-x-4">
+            <a
+              href="./index.html"
+              class="text-white hover:text-yellow-200 transition"
+              >Home</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Shows</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Login</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >SignUp</a
+            >
+          </div>
+          <!-- Language Dropdown -->
+          <div class="relative group">
+            <input type="checkbox" id="lang-toggle" class="hidden peer" />
+            <label
+              for="lang-toggle"
+              class="flex items-center space-x-1 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full px-3 py-1 transition cursor-pointer"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/44/44386.png"
+                alt="Earth"
+                class="w-5 h-5"
+              />
+              <span class="text-white text-sm font-medium">EN</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-white transition-transform duration-200 peer-checked:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </label>
+            <div
+              class="absolute right-0 mt-2 w-32 bg-slate-900 rounded-md shadow-lg z-40 hidden peer-checked:block"
+            >
+              <div class="py-1">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >English</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >Amharic</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="md:hidden text-white focus:outline-none"
+          id="mobile-menu-button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu with sliding animation -->
+      <div
+        class="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-lg transform origin-top transition-all duration-300 ease-out scale-y-0 -translate-y-full z-30"
+        id="mobile-menu"
+      >
+        <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+          <a
+            href="./index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Shows</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Login</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >SignUp</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class=" font-sans w-full">
+     <div class="w-full h-full flex justify-center items-center px-4 pt-24">
+         <div class="bg-black/50 backdrop-sm rounded-lg shadow-md w-full max-w-md px-4 py-12">
+        <h1 class="text-3xl font-bold text-start text-[#fcc5cf] mb-6">Create an account</h1>
+        
+        <form class="">
+            <div class="mb-8">
+                <label class="block text-gray-100 text-sm font-medium mb-4" for="mobile">
+                    Enter Your Mobile Number
+                </label>
+                <div class="relative">
+                    <div class="absolute bg-[#fcc5cf] inset-y-0 left-0 flex items-center rounded-l-md px-3 pointer-events-none">
+                        <span class="text-gray-600 font-medium">+251</span>
+                    </div>
+                    <input 
+                        type="tel" 
+                        id="mobile" 
+                        name="number"
+                        placeholder="Mobile Number" 
+                        class="w-full pl-16 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                </div>
+            </div>
+            
+            <div class=" flex justify-center items-center gap-5 mb-8">
+                    <a href="#"
+                      class="bg-[#ff66c4] block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md text-center"
+                    >
+                     Back
+                    </a>
+                    <a href="./home.html"
+                      class=" bg-blue-600 text-center block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md"
+                    >
+                      Send
+                    </a>
+                  </div>
+        </form>
+        
+        <div class="text-center text-sm">
+            <a href="#" class="text-gray-300 block mb-4">Already have an account?</a>
+            <a href="#" class="text-gray-200 font-medium hover:text-gray-400 underline underline-offset-4">Login here</a>
+        </div>
+    </div>
+     </div>
+    </main>
+
+    
+    <!-- Scroll JS -->
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
