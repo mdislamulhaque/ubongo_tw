@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +7,7 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
 
-    <title>Ubongo Kids - The All New</title>
+    <title>Saladina Kids - The All New</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <link
@@ -38,17 +37,19 @@
         <div class="flex items-center space-x-6">
           <div class="hidden md:flex space-x-4">
             <a
-              href="./index.html"
+              href="./home.html"
               class="text-white hover:text-yellow-200 transition"
               >Home</a
             >
             <a href="#" class="text-white hover:text-yellow-200 transition"
               >Shows</a
             >
-            <a href="#" class="text-white hover:text-yellow-200 transition"
+            <a href="./login.html" class="text-white hover:text-yellow-200 transition"
               >Login</a
             >
-            <a href="./signUp.html" class="text-white hover:text-yellow-200 transition"
+            <a
+              href="./signUp.html"
+              class="text-white hover:text-yellow-200 transition"
               >SignUp</a
             >
           </div>
@@ -126,7 +127,7 @@
       >
         <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
           <a
-            href="./index.html"
+            href="./home.html"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
             >Home</a
           >
@@ -136,7 +137,7 @@
             >Shows</a
           >
           <a
-            href="#"
+            href="./login.html"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
             >Login</a
           >
@@ -150,66 +151,70 @@
     </header>
 
     <!-- Main Content -->
-    <main class=" font-sans w-full">
-     <div class="w-full h-full flex justify-center items-center px-4 pt-24">
-         <div class="bg-black/50 backdrop-sm rounded-lg shadow-md w-full max-w-md px-4 py-12">
-        <h1 class="text-3xl font-bold text-start text-[#fcc5cf] mb-6">Create an account</h1>
-        
-        <form class="">
+    <main class="font-sans w-full">
+      <div class="w-full h-full flex justify-center items-center px-4 pt-24">
+        <div
+          class="bg-black/50 backdrop-sm rounded-lg shadow-md w-full max-w-md px-4 py-12"
+        >
+          <h1 class="text-3xl font-bold text-start text-[#fcc5cf] mb-6">
+            Create an account
+          </h1>
+
+          <form class="">
             <div class="mb-8">
-                <label class="block text-gray-100 text-sm font-medium mb-4" for="mobile">
-                    Enter Your Mobile Number
-                </label>
-                <div class="relative">
-                    <div class="absolute bg-[#fcc5cf] inset-y-0 left-0 flex items-center rounded-l-md px-3 pointer-events-none">
-                        <span class="text-gray-600 font-medium">+251</span>
-                    </div>
-                    <input 
-                        type="tel" 
-                        id="mobile" 
-                        name="number"
-                        placeholder="Mobile Number" 
-                        class="w-full pl-16 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    >
+              <label
+                class="block text-gray-100 text-sm font-medium mb-4"
+                for="mobile"
+              >
+                Enter Your Mobile Number
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute bg-[#fcc5cf] inset-y-0 left-0 flex items-center rounded-l-md px-3 pointer-events-none"
+                >
+                  <span class="text-gray-600 font-medium">+251</span>
                 </div>
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="number"
+                  placeholder="Mobile Number"
+                  class="w-full pl-16 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
             </div>
-            
-            <div class=" flex justify-center items-center gap-5 mb-8">
-                    <a href="#"
-                      class="bg-[#ff66c4] block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md text-center"
-                    >
-                     Back
-                    </a>
-                    <a href="./otp.html"
-                      class=" bg-blue-600 text-center block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md"
-                    >
-                      Send
-                    </a>
-                  </div>
-        </form>
-        
-        <div class="text-center text-sm">
-            <a href="#" class="text-gray-300 block mb-4">Already have an account?</a>
-            <a href="#" class="text-gray-200 font-medium hover:text-gray-400 underline underline-offset-4">Login here</a>
+
+            <div class="flex justify-center items-center gap-5 mb-8">
+              <a
+                href="#"
+                class="bg-[#ff66c4] block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md text-center"
+              >
+                Back
+              </a>
+              <a
+                href="./otp.html"
+                class="bg-blue-600 text-center block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md"
+              >
+                Send
+              </a>
+            </div>
+          </form>
+
+          <div class="text-center text-sm">
+            <a href="./login.html" class="text-gray-300 block mb-4"
+              >Already have an account?</a
+            >
+            <a
+              href="./login.html"
+              class="text-gray-200 font-medium hover:text-gray-400 underline underline-offset-4"
+              >Login here</a
+            >
+          </div>
         </div>
-    </div>
-     </div>
+      </div>
     </main>
 
-    
     <!-- Scroll JS -->
     <script src="./index.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

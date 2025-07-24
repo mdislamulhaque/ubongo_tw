@@ -151,80 +151,66 @@
     </header>
 
     <!-- Main Content -->
-    <main class="font-sans w-full flex justify-center items-center py-24">
-      <div class="bg-black/10 rounded-lg shadow-md p-6 w-full max-w-md">
-        <div class="text-center mb-6">
-          <h2 class="text-3xl font-bold text-[#fcc5cf]">
-            Please enter 6-digit OTP
-          </h2>
-          <p class="text-[#fcc5cf] mt-2">received on your phone</p>
-        </div>
+    <main class="font-sans w-full">
+      <div class="w-full h-full flex justify-center items-center px-4 pt-24">
+        <div
+          class="bg-black/50 backdrop-sm rounded-lg shadow-md w-full max-w-md px-4 py-12"
+        >
+          <h1 class="text-3xl font-bold text-start text-[#fcc5cf] mb-6">
+            Log In
+          </h1>
 
-        <form class="space-y-6">
-          <div class="flex justify-between gap-2">
-            <input
-              type="text"
-              maxlength="1"
-              class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-            />
-            <input
-              type="text"
-              maxlength="1"
-              class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-            />
-          </div>
+          <form class="">
+            <div class="mb-8">
+              <label
+                class="block text-gray-100 text-sm font-medium mb-4"
+                for="mobile"
+              >
+                Enter Your Mobile Number
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute bg-[#fcc5cf] inset-y-0 left-0 flex items-center rounded-l-md px-3 pointer-events-none"
+                >
+                  <span class="text-gray-600 font-medium">+251</span>
+                </div>
+                <input
+                  type="tel"
+                  id="mobile"
+                  name="number"
+                  placeholder="Mobile Number"
+                  class="w-full pl-16 p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </div>
 
-          <div
-            class="flex flex-col sm:flex-row justify-between items-center gap-4"
-          >
+            <div class="flex justify-center items-center gap-5 mb-8">
+              <a
+                href="./home.html"
+                class="bg-[#ff66c4] block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md text-center"
+              >
+                Back
+              </a>
+              <a
+                href="./otp.html"
+                class="bg-blue-600 text-center block w-full py-2 px-4 rounded-lg text-white font-bold shadow-md"
+              >
+                Send
+              </a>
+            </div>
+          </form>
+
+          <div class="text-center text-sm">
+            <a href="./signUp.html" class="text-gray-300 block mb-4"
+              >Don't have an account yet?</a
+            >
             <a
               href="./signUp.html"
-              type="submit"
-              class="w-full sm:w-auto bg-[#ff66c4] hover:bg-[#b13b84] text-white text-center font-medium py-2 px-6 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              class="text-gray-200 font-medium hover:text-gray-400 underline underline-offset-4"
+              >SignUp here</a
             >
-              ← Back to Home
-            </a>
-
-            <a
-              href="./home.html"
-              type="submit"
-              class="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white text-center font-medium py-2 px-6 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            >
-              Verify OTP
-            </a>
           </div>
-
-          <div class="text-center text-sm text-gray-100">
-            <p>Not received?</p>
-            <a
-              href="#"
-              type="submit"
-              class="block mt-4 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-center font-medium py-2 px-6 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            >
-              Resend OTP
-            </a>
-          </div>
-        </form>
+        </div>
       </div>
     </main>
 
