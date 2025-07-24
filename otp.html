@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Ubongo Kids - The All New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#0f0f0f] max-w-7xl mx-auto">
+    <!-- Header Section -->
+    <header class="py-4 px-6 shadow-lg relative w-full">
+      <div class="container mx-auto flex justify-between items-center w-full">
+        <div class="space-y-2">
+          <a
+            href="./home.html"
+            class="block text-2xl md:text-3xl font-bold text-yellow-400"
+            >SaladinaTV</a
+          >
+        </div>
+        <div class="flex items-center space-x-6">
+          <div class="hidden md:flex space-x-4">
+            <a
+              href="./index.html"
+              class="text-white hover:text-yellow-200 transition"
+              >Home</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Shows</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Login</a
+            >
+            <a href="./signUp.html" class="text-white hover:text-yellow-200 transition"
+              >SignUp</a
+            >
+          </div>
+          <!-- Language Dropdown -->
+          <div class="relative group">
+            <input type="checkbox" id="lang-toggle" class="hidden peer" />
+            <label
+              for="lang-toggle"
+              class="flex items-center space-x-1 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full px-3 py-1 transition cursor-pointer"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/44/44386.png"
+                alt="Earth"
+                class="w-5 h-5"
+              />
+              <span class="text-white text-sm font-medium">EN</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-white transition-transform duration-200 peer-checked:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </label>
+            <div
+              class="absolute right-0 mt-2 w-32 bg-slate-900 rounded-md shadow-lg z-40 hidden peer-checked:block"
+            >
+              <div class="py-1">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >English</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >Amharic</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="md:hidden text-white focus:outline-none"
+          id="mobile-menu-button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu with sliding animation -->
+      <div
+        class="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-lg transform origin-top transition-all duration-300 ease-out scale-y-0 -translate-y-full z-30"
+        id="mobile-menu"
+      >
+        <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+          <a
+            href="./index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Shows</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Login</a
+          >
+          <a
+            href="./signUp.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >SignUp</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="font-sans w-full flex justify-center items-center py-24">
+      <div class="bg-black/10 rounded-lg shadow-md p-6 w-full max-w-md">
+        <div class="text-center mb-6">
+            <h2 class="text-3xl font-bold text-[#fcc5cf]">Please enter 6-digit OTP</h2>
+            <p class="text-[#fcc5cf] mt-2">received on your phone</p>
+        </div>
+        
+        <form class="space-y-6">
+            <div class="flex justify-between gap-2">
+                <input type="text" maxlength="1" class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                <input type="text" maxlength="1" class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                <input type="text" maxlength="1" class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                <input type="text" maxlength="1" class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                <input type="text" maxlength="1" class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+                <input type="text" maxlength="1" class="w-full h-14 text-center text-2xl font-semibold border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition">
+            </div>
+            
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                
+                <a href="#" type="submit" class="w-full sm:w-auto bg-[#ff66c4] hover:bg-[#b13b84] text-white text-center font-medium py-2 px-6 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    ← Back to Home
+                </a>
+                
+                <a href="#" type="submit" class="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white text-center font-medium py-2 px-6 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Verify OTP
+                </a>
+            </div>
+            
+            <div class="text-center text-sm text-gray-100">
+                <p>Not received? </p>
+                <a href="#" type="submit" class="block  mt-4 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-center font-medium py-2 px-6 rounded-lg transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Resend OTP
+                </a>
+            </div>
+        </form>
+    </div>
+    </main>
+
+    <!-- Scroll JS -->
+    <script src="./index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
