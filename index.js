@@ -47,3 +47,23 @@
                 }
             });
         });
+
+// charecter card section
+        
+const characterCards = document.querySelectorAll(".character-card");
+
+characterCards.forEach((card) => {
+  card.addEventListener("click", () => {
+    const description = card.querySelector(".character-description");
+    if (description) {
+      if (description.classList.contains("line-clamp-2")) {
+        description.classList.remove("line-clamp-2");
+        description.classList.add("line-clamp-none");
+      } else {
+        description.classList.remove("line-clamp-none");
+        description.classList.add("line-clamp-2");
+      }
+    }
+  });
+});
+

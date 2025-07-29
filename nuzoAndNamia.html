@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>SaladinaTV - The All New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#0f0f0f] max-w-7xl mx-auto">
+    <!-- Header Section -->
+    <header class="py-4 px-6 shadow-lg relative w-full">
+      <div class="container mx-auto flex justify-between items-center w-full">
+        <div class="space-y-2">
+          <a
+            href="./home.html"
+            class="block text-2xl md:text-3xl font-bold text-yellow-400"
+            >SaladinaTV</a
+          >
+        </div>
+        <div class="flex items-center space-x-6">
+          <div class="hidden md:flex space-x-4">
+            <a
+              href="./home.html"
+              class="text-white hover:text-yellow-200 transition"
+              >Home</a
+            >
+            <a
+              href="./shows.html"
+              class="text-white hover:text-yellow-200 transition"
+              >Shows</a
+            >
+            <a
+              href="./login.html"
+              class="text-white hover:text-yellow-200 transition"
+              >Login</a
+            >
+            <a
+              href="./signUp.html"
+              class="text-white hover:text-yellow-200 transition"
+              >SignUp</a
+            >
+          </div>
+          <!-- Language Dropdown -->
+          <div class="relative group">
+            <input type="checkbox" id="lang-toggle" class="hidden peer" />
+            <label
+              for="lang-toggle"
+              class="flex items-center space-x-1 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full px-3 py-1 transition cursor-pointer"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/44/44386.png"
+                alt="Earth"
+                class="w-5 h-5"
+              />
+              <span class="text-white text-sm font-medium">EN</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-white transition-transform duration-200 peer-checked:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </label>
+            <div
+              class="absolute right-0 mt-2 w-32 bg-slate-900 rounded-md shadow-lg z-40 hidden peer-checked:block"
+            >
+              <div class="py-1">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >English</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >Amharic</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="md:hidden text-white focus:outline-none"
+          id="mobile-menu-button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu with sliding animation -->
+      <div
+        class="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-lg transform origin-top transition-all duration-300 ease-out scale-y-0 -translate-y-full z-30"
+        id="mobile-menu"
+      >
+        <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+          <a
+            href="./home.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Home</a
+          >
+          <a
+            href="./shows.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Shows</a
+          >
+          <a
+            href="./login.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Login</a
+          >
+          <a
+            href="./signUp.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >SignUp</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="text-white font-sans w-full">
+      <!-- Hero Section -->
+      <div class="flex flex-col md:flex-row px-6 py-10 gap-6">
+        <!-- Left Image -->
+        <div class="w-full md:w-1/2 rounded-md overflow-hidden">
+          <img
+            src="./assets/3.jpg"
+            alt="image-hero"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Right Content -->
+        <div class="w-full md:w-1/2 flex flex-col flex-grow">
+          <!-- Top Text -->
+          <div>
+            <h1 class="text-2xl md:text-3xl font-bold">Nuzo And Namia</h1>
+            <p class="mt-3 text-sm md:text-base leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              similique sit assumenda. Totam, illum. Hic molestiae maiores
+              repellat ex repellendus? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Voluptas similique sit assumenda. Totam, illum.
+              Hic molestiae maiores repellat ex repellendus?
+            </p>
+          </div>
+
+          <!-- Bottom Text Always at Bottom -->
+          <div class="mt-auto pt-6 space-y-1">
+            <p>Directors: Ubongo</p>
+            <p>Generics: Kids</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gap before slider -->
+      <div class="h-6 md:h-10"></div>
+
+      <!-- charecter section  -->
+      <div class="w-full mx-auto px-4 flex flex-col gap-5">
+        <!-- card-1  -->
+        <div
+          class="w-full h-auto bg-[#784a2a] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer p-4 mx-auto character-card"
+        >
+           <div class="relative w-full h-full">
+              <!-- Image -->
+              <img
+                src="./assets/2.jpg"
+                alt="Character 1"
+                class="size-20 rounded-full object-cover float-left mr-4"
+              />
+
+              <!-- Text -->
+              <h3 class=" text-md md:text-lg font-medium absolute bg-[#7bc027]  top-16 px-4 left-1 rounded-lg">Nuzo</h3>
+            </div>
+            <p
+              class="text-sm text-justify line-clamp-2 md:line-clamp-none character-description  pt-3"
+            >
+              Description of character 1. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse modi quibusdam at debitis impedit maiores
+              ab? Perferendis iure aspernatur quod ex ipsa explicabo quas vel,
+              officia sequi debitis obcaecati mollitia ab consectetur commodi
+              aliquid quidem fugit illum necessitatibus eum temporibus? Odit
+              neque nemo temporibus dolore minus voluptates eius quidem
+              delectus.
+            </p>
+        </div>
+         <!-- card-2  -->
+        <div
+          class="w-full h-auto bg-[#784a2a] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer p-4 mx-auto character-card"
+        >
+           <div class="relative w-full h-full">
+              <!-- Image -->
+              <img
+                src="./assets/2.jpg"
+                alt="Character 1"
+                class="size-20 rounded-full object-cover float-left mr-4"
+              />
+
+              <!-- Text -->
+              <h3 class=" text-md md:text-lg font-medium absolute bg-[#7bc027]  top-16 px-4 left-1 rounded-lg">Nuzo</h3>
+            </div>
+            <p
+              class="text-sm text-justify line-clamp-2 md:line-clamp-none character-description  pt-3"
+            >
+              Description of character 1. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse modi quibusdam at debitis impedit maiores
+              ab? Perferendis iure aspernatur quod ex ipsa explicabo quas vel,
+              officia sequi debitis obcaecati mollitia ab consectetur commodi
+              aliquid quidem fugit illum necessitatibus eum temporibus? Odit
+              neque nemo temporibus dolore minus voluptates eius quidem
+              delectus.
+            </p>
+        </div>
+         <!-- card-3  -->
+        <div
+          class="w-full h-auto bg-[#784a2a] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer p-4 mx-auto character-card"
+        >
+           <div class="relative w-full h-full">
+              <!-- Image -->
+              <img
+                src="./assets/2.jpg"
+                alt="Character 1"
+                class="size-20 rounded-full object-cover float-left mr-4"
+              />
+
+              <!-- Text -->
+              <h3 class=" text-md md:text-lg font-medium absolute bg-[#7bc027]  top-16 px-4 left-1 rounded-lg">Nuzo</h3>
+            </div>
+            <p
+              class="text-sm text-justify line-clamp-2 md:line-clamp-none character-description  pt-3"
+            >
+              Description of character 1. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse modi quibusdam at debitis impedit maiores
+              ab? Perferendis iure aspernatur quod ex ipsa explicabo quas vel,
+              officia sequi debitis obcaecati mollitia ab consectetur commodi
+              aliquid quidem fugit illum necessitatibus eum temporibus? Odit
+              neque nemo temporibus dolore minus voluptates eius quidem
+              delectus.
+            </p>
+        </div>
+         <!-- card-4  -->
+        <div
+          class="w-full h-auto bg-[#784a2a] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer p-4 mx-auto character-card"
+        >
+           <div class="relative w-full h-full">
+              <!-- Image -->
+              <img
+                src="./assets/2.jpg"
+                alt="Character 1"
+                class="size-20 rounded-full object-cover float-left mr-4"
+              />
+
+              <!-- Text -->
+              <h3 class=" text-md md:text-lg font-medium absolute bg-[#7bc027]  top-16 px-4 left-1 rounded-lg">Nuzo</h3>
+            </div>
+            <p
+              class="text-sm text-justify line-clamp-2 md:line-clamp-none character-description  pt-3"
+            >
+              Description of character 1. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse modi quibusdam at debitis impedit maiores
+              ab? Perferendis iure aspernatur quod ex ipsa explicabo quas vel,
+              officia sequi debitis obcaecati mollitia ab consectetur commodi
+              aliquid quidem fugit illum necessitatibus eum temporibus? Odit
+              neque nemo temporibus dolore minus voluptates eius quidem
+              delectus.
+            </p>
+        </div>
+         <!-- card-5  -->
+        <div
+          class="w-full h-auto bg-[#784a2a] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 cursor-pointer p-4 mx-auto character-card"
+        >
+           <div class="relative w-full h-full">
+              <!-- Image -->
+              <img
+                src="./assets/2.jpg"
+                alt="Character 1"
+                class="size-20 rounded-full object-cover float-left mr-4"
+              />
+
+              <!-- Text -->
+              <h3 class=" text-md md:text-lg font-medium absolute bg-[#7bc027]  top-16 px-4 left-1 rounded-lg">Nuzo</h3>
+            </div>
+            <p
+              class="text-sm text-justify line-clamp-2 md:line-clamp-none character-description  pt-3"
+            >
+              Description of character 1. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Esse modi quibusdam at debitis impedit maiores
+              ab? Perferendis iure aspernatur quod ex ipsa explicabo quas vel,
+              officia sequi debitis obcaecati mollitia ab consectetur commodi
+              aliquid quidem fugit illum necessitatibus eum temporibus? Odit
+              neque nemo temporibus dolore minus voluptates eius quidem
+              delectus.
+            </p>
+        </div>
+      </div>
+
+      <!-- Slider Section -->
+      <div class="mx-auto px-4 space-y-10 w-full mt-10">
+        <!-- Section Title -->
+        <div class="space-y-4">
+          <div class="relative pointer-events-none">
+            <button
+              onclick="scrollSliderLeft('Saladina')"
+              class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 z-20 pointer-events-auto"
+            >
+              &#10094;
+            </button>
+
+            <div
+              id="Saladina"
+              class="slider flex space-x-4 overflow-x-auto pointer-events-auto py-2"
+            >
+              <div
+                class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+              >
+                <img
+                  src="./assets/6.jpg"
+                  alt="Card Image"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+              >
+                <img
+                  src="./assets/10.jpg"
+                  alt="Card Image"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+              >
+                <img
+                  src="./assets/9.jpg"
+                  alt="Card Image"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div
+                class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+              >
+                <img
+                  src="./assets/5.jpg"
+                  alt="Card Image"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <button
+              onclick="scrollRight('Saladina')"
+              class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 z-20 pointer-events-auto"
+            >
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white py-6 px-4">
+      <div class="text-center mt-12">
+        <p class="text-lg font-semibold">Watch from anywhere anytime 24/7</p>
+        <div class="flex flex-col md:flex-row md:justify-between px-4">
+          <div>
+            <h2 class="text-4xl font-bold mt-2 text-yellow-400">SaladinaTV</h2>
+            <div class="flex justify-center items-center space-x-6 mt-4">
+              <a href="#" aria-label="Facebook">
+                <img
+                  src="./assets/facebook.png"
+                  alt="Facebook"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a href="#" aria-label="Instagram">
+                <img
+                  src="./assets/instagram.png"
+                  alt="Instagram"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <img
+                  src="./assets/linkedin.png"
+                  alt="LinkedIn"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a href="#" aria-label="twitter">
+                <img src="./assets/twitter.png" alt="X" class="w-6 h-6" />
+              </a>
+              <a href="#" aria-label="YouTube">
+                <img src="./assets/youtube.png" alt="YouTube" class="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center mt-6 space-x-4">
+            <a href="#">
+              <img
+                src="./assets/app-store.png"
+                alt="Download on the App Store"
+                class="h-10 w-32 object-contain rounded-md border-2 border-gray-300 hover:scale-105 transform duration-300"
+              />
+            </a>
+
+            <a href="#">
+              <img
+                src="./assets/google-play-store.png"
+                class="h-30 w-32 object-contain rounded-md border-2 border-gray-300 hover:scale-105 transform duration-300"
+                alt="Google Play"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex gap-3 md:gap-6 md:justify-center flex-col md:flex-row justify-start mt-5"
+        >
+          <a href="#" class="hover:underline underline-offset-4"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:underline underline-offset-4"
+            >Terms And Condition</a
+          >
+          <a href="#" class="hover:underline underline-offset-4">About Us</a>
+        </div>
+        <div class="mt-5">
+          <p>
+            <span><i class="ri-copyright-line"></i> </span>Copyright 2025
+            Saladina <span>|</span> All Rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll JS -->
+    <script src="./index.js"></script>
+  </body>
+</html>
