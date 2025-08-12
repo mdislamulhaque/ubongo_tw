@@ -66,4 +66,20 @@ characterCards.forEach((card) => {
     }
   });
 });
+  
 
+// user
+
+const userMenuButton = document.getElementById("userMenuButton");
+  const userMenu = document.getElementById("userMenu");
+
+  userMenuButton.addEventListener("click", () => {
+    userMenu.classList.toggle("hidden");
+  });
+
+  // Optional: Close dropdown on click outside
+  document.addEventListener("click", (e) => {
+    if (!userMenuButton.contains(e.target) && !userMenu.contains(e.target)) {
+      userMenu.classList.add("hidden");
+    }
+  });
