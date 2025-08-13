@@ -115,25 +115,64 @@
               />
             </button>
 
-            <!-- Dropdown -->
+             <!-- Dropdown -->
+
             <div
               id="userMenu"
               class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
             >
+              <!-- Profile -->
               <a
-                href="#"
+                href="./editProfile.html"
                 class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >Profile</a
               >
-              <a
-                href="#"
-                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-                >Settings</a
-              >
+                Profile
+              </a>
+
+              <!-- About Us with submenu -->
+              <div class="relative">
+                <button
+                  class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 toggle-btn"
+                >
+                  About Us ▾
+                </button>
+
+                <!-- Submenu (flowing) -->
+                <div class="hidden submenu bg-white rounded-lg py-2 mt-1">
+                  <a
+                    href="./aboutUs.html"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Description
+                  </a>
+
+                  <!-- More submenu -->
+                  <div>
+                    <button
+                      class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 toggle-btn"
+                    >
+                      More ▾
+                    </button>
+
+                    <!-- Nested submenu -->
+                    <div class="hidden submenu bg-white rounded-lg py-2 mt-1">
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-red-600 hover:bg-red-100"
+                      >
+                        Delete Account
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="border-t my-1"></div>
-              <a href="#" class="block px-4 py-2 text-red-600 hover:bg-red-100"
-                >Logout</a
-              >
+
+              <!-- Logout -->
+              <a href="#" class="block px-4 py-2 text-red-600 hover:bg-red-100">
+                Logout
+              </a>
             </div>
           </div>
         </div>
