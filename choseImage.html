@@ -24,7 +24,7 @@
     />
   </head>
   <body class="min-h-screen flex flex-col bg-[#0f0f0f] max-w-7xl mx-auto">
-    <!-- Header Section -->
+     <!-- Header Section -->
     <header class="py-4 px-6 shadow-lg relative w-full">
       <div class="container mx-auto flex justify-between items-center w-full">
         <div class="space-y-2">
@@ -232,66 +232,121 @@
 
     <!-- Main Content -->
     <main class="text-white font-sans w-full">
-      <div class="flex items-start mt-12 justify-center p-4">
-        <div class="bg-gray-800 p-6 rounded-xl w-full max-w-lg">
+      <!-- ==== -->
+
+      <div class="flex items-center justify-center p-4 mt-12">
+        <div class="bg-gray-800 rounded-lg p-4 w-full max-w-2xl">
+          <!-- Header -->
           <div class="flex items-center justify-between mb-4">
-            <h2 class="text-lg font-semibold text-pink-300">Edit profile</h2>
-            <button
-              class="px-4 py-1 bg-pink-300 text-gray-900 rounded hover:bg-pink-400 transition"
-            >
-              Save
-            </button>
+            <button class="text-purple-400 text-2xl">←</button>
+            <h2 class="text-xl md:text-2xl font-semibold text-purple-300">
+              Choose Profile Picture
+            </h2>
+            <button class="text-purple-400 font-semibold">Save</button>
           </div>
 
-          <div class="flex flex-col sm:flex-row items-center gap-4">
-            <!-- Avatar -->
-            <div class="flex flex-col items-center">
+          <!-- Profile pictures row -->
+          <div class="">
+            <div class="relative pointer-events-none">
+              <button
+                onclick="scrollSliderLeft('profile-image')"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10094;
+              </button>
               <div
-                class="w-20 h-20 rounded-lg overflow-hidden bg-yellow-200 flex items-center justify-center"
+                id="profile-image"
+                class="slider flex space-x-4 overflow-x-auto py-2 pointer-events-auto"
               >
-                <img
-                  src="./assets/ubongoKids/koba-icon.png"
-                  alt="Avatar"
-                  class="w-full h-full object-cover"
-                />
+                <!-- Profile card -->
+                <div
+                  class="relative bg-yellow-200 rounded-xl p-2 flex flex-col items-center w-32 shrink-0 border-4 border-blue-400"
+                >
+                  <img
+                    src="./assets/ubongoKids/amani-icon.png"
+                    class="rounded-full mb-2"
+                    alt="Avatar 1"
+                  />
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 rounded-full border-2 border-white bg-blue-400"
+                  ></div>
+                </div>
+                <!-- Profile card -->
+                <div
+                  class="relative bg-yellow-200 rounded-xl p-2 flex flex-col items-center w-32 shrink-0"
+                >
+                  <img
+                    src="./assets/ubongoKids/baraka-icon.png"
+                    class="rounded-full mb-2"
+                    alt="Avatar 2"
+                  />
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 rounded-full border-2 border-white"
+                  ></div>
+                </div>
+                <!-- Profile card -->
+                <div
+                  class="relative bg-yellow-200 rounded-xl p-2 flex flex-col items-center w-32 shrink-0"
+                >
+                  <img
+                    src="./assets/ubongoKids/kiduchu-icon.png"
+                    class="rounded-full mb-2"
+                    alt="Avatar 2"
+                  />
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 rounded-full border-2 border-white"
+                  ></div>
+                </div>
+                <!-- Profile card -->
+                <div
+                  class="relative bg-yellow-200 rounded-xl p-2 flex flex-col items-center w-32 shrink-0"
+                >
+                  <img
+                    src="./assets/ubongoKids/kibena-icon.png"
+                    class="rounded-full mb-2"
+                    alt="Avatar 2"
+                  />
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 rounded-full border-2 border-white"
+                  ></div>
+                </div>
+                <!-- Profile card -->
+                <div
+                  class="relative bg-yellow-200 rounded-xl p-2 flex flex-col items-center w-32 shrink-0"
+                >
+                  <img
+                    src="./assets/ubongoKids/kibena-icon.png"
+                    class="rounded-full mb-2"
+                    alt="Avatar 2"
+                  />
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 rounded-full border-2 border-white"
+                  ></div>
+                </div>
+                <!-- Profile card -->
+                <div
+                  class="relative bg-yellow-200 rounded-xl p-2 flex flex-col items-center w-32 shrink-0"
+                >
+                  <img
+                    src="./assets/ubongoKids/kibena-icon.png"
+                    class="rounded-full mb-2"
+                    alt="Avatar 2"
+                  />
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 rounded-full border-2 border-white"
+                  ></div>
+                </div>
               </div>
-
-              <!-- Hidden file input -->
-              <input id="fileInput" type="file" class="hidden" />
-
-              <!-- Styled button to trigger file input -->
-              <a href="./choseImage.html"
-                
-                class="mt-2 px-3 py-1 bg-sky-400 text-sm rounded inline-block hover:bg-sky-500 transition"
+              <button
+                onclick="scrollRight('profile-image')"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
               >
-                Choose Picture
-              </a>
-            </div>
-
-            <!-- Form Fields -->
-            <div class="flex flex-col gap-3 flex-1 w-full">
-              <input
-                type="text"
-                placeholder="User Name"
-                class="bg-yellow-200 text-gray-700 px-3 py-2 rounded focus:outline-none placeholder-gray-500 w-full"
-              />
-
-              <div
-                class="flex items-center justify-between bg-yellow-200 px-3 py-2 rounded w-full"
-              >
-                <span class="text-gray-700">Content Language</span>
-                <select class="bg-transparent focus:outline-none text-gray-700">
-                  <option>English</option>
-                  <option>Amharic</option>
-                 
-                </select>
-              </div>
+                &#10095;
+              </button>
             </div>
           </div>
         </div>
       </div>
-
-
     </main>
 
     <!-- Footer -->

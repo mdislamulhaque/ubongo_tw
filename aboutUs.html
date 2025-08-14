@@ -24,29 +24,26 @@
     />
   </head>
   <body class="min-h-screen flex flex-col bg-[#0f0f0f] max-w-7xl mx-auto">
-    <!-- Header Section -->
+    
+   <!-- Header Section -->
     <header class="py-4 px-6 shadow-lg relative w-full">
       <div class="container mx-auto flex justify-between items-center w-full">
         <div class="space-y-2">
           <a
-            href="./home.html"
+            href="#"
             class="block text-2xl md:text-3xl font-bold text-yellow-400"
             >SaladinaTV</a
           >
         </div>
         <div class="flex items-center space-x-6 mr-1">
           <div class="hidden md:flex space-x-4">
-            <a
-              href="./home.html"
-              class="text-white hover:text-yellow-200 transition"
+            <a href="#" class="text-white hover:text-yellow-200 transition"
               >Home</a
             >
-            <a
-              href="./shows.html"
-              class="text-white hover:text-yellow-200 transition"
+            <a href="#" class="text-white hover:text-yellow-200 transition"
               >Shows</a
             >
-            <a
+            <!-- <a
               href="./login.html"
               class="text-white hover:text-yellow-200 transition"
               >Login</a
@@ -55,10 +52,10 @@
               href="./signUp.html"
               class="text-white hover:text-yellow-200 transition"
               >SignUp</a
-            >
+            > -->
           </div>
           <!-- Language Dropdown -->
-          <div class="relative group">
+          <!-- <div class="relative group">
             <input type="checkbox" id="lang-toggle" class="hidden peer" />
             <label
               for="lang-toggle"
@@ -101,7 +98,7 @@
                 >
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- User Section -->
           <div class="relative">
             <button
@@ -109,18 +106,25 @@
               class="flex items-center space-x-2 focus:outline-none group"
             >
               <img
-                src="https://i.ibb.co.com/WvvqDyH2/islamul-net2.jpg"
+                src="./assets/ubongoKids/koba-icon.png"
                 alt="User"
-                class="w-10 h-10 rounded-full border-2 border-gray-600 group-hover:border-indigo-400"
+                class="w-10 h-10 rounded-full border-2 border-gray-600 group-hover:border-indigo-400 object-cover"
               />
             </button>
 
-             <!-- Dropdown -->
+            <!-- Dropdown -->
 
             <div
               id="userMenu"
               class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
             >
+              <!-- home  -->
+              <a
+                href="./userDashboard.html"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Home
+              </a>
               <!-- Profile -->
               <a
                 href="./editProfile.html"
@@ -204,16 +208,16 @@
       >
         <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
           <a
-            href="./home.html"
+            href="#"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
             >Home</a
           >
           <a
-            href="./shows.html"
+            href="#"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
             >Shows</a
           >
-          <a
+          <!-- <a
             href="./login.html"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
             >Login</a
@@ -222,7 +226,7 @@
             href="./signUp.html"
             class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
             >SignUp</a
-          >
+          > -->
         </div>
       </div>
     </header>
