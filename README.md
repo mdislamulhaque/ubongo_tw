@@ -1,6 +1,6 @@
-# 🎬 SaladinaTV
+# 🎬 SafaricomTV
 
-SaladinaTV is a modern video streaming web application project.  
+SafaricomTV is a modern video streaming web application project.  
 It is built using **Vite** and uses **npm scripts** to run in development mode or build for production.
 
 ---
@@ -9,8 +9,8 @@ It is built using **Vite** and uses **npm scripts** to run in development mode o
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/saladinaTV.git
-   cd saladinaTV
+   git clone https://github.com/vivacom-bd/safaricom-tv.git
+   cd SafaricomTV
 2.Install dependencies
 npm install
 
