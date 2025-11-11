@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>SaladinaTV - The All New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="min-h-screen flex flex-col bg-[#0f0f0f] max-w-7xl mx-auto">
+    <!-- Header Section -->
+    <header class="py-4 px-3 shadow-lg relative w-full">
+      <div class="container mx-auto flex justify-between items-center w-full">
+        <div class="space-y-2">
+          <a
+            href="#"
+            class="block text-2xl md:text-3xl font-bold text-yellow-400"
+            >SaladinaTV</a
+          >
+        </div>
+        <div class="flex items-center space-x-6 mr-1">
+          <div class="hidden md:flex space-x-4">
+            <!-- <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Home</a
+            >
+            <a href="#" class="text-white hover:text-yellow-200 transition"
+              >Shows</a
+            > -->
+            <!-- <a
+              href="./login.html"
+              class="text-white hover:text-yellow-200 transition"
+              >Login</a
+            >
+            <a
+              href="./signUp.html"
+              class="text-white hover:text-yellow-200 transition"
+              >SignUp</a
+            > -->
+          </div>
+          <!-- Language Dropdown -->
+          <!-- <div class="relative group">
+            <input type="checkbox" id="lang-toggle" class="hidden peer" />
+            <label
+              for="lang-toggle"
+              class="flex items-center space-x-1 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full px-3 py-1 transition cursor-pointer"
+            >
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/44/44386.png"
+                alt="Earth"
+                class="w-5 h-5"
+              />
+              <span class="text-white text-sm font-medium">EN</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-4 w-4 text-white transition-transform duration-200 peer-checked:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </label>
+            <div
+              class="absolute right-0 mt-2 w-32 bg-slate-900 rounded-md shadow-lg z-40 hidden peer-checked:block"
+            >
+              <div class="py-1">
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >English</a
+                >
+                <a
+                  href="#"
+                  class="block px-4 py-2 text-sm text-gray-200 hover:bg-slate-800"
+                  >Amharic</a
+                >
+              </div>
+            </div>
+          </div> -->
+          <!-- User Section -->
+          <div class="relative">
+            <button
+              id="userMenuButton"
+              class="flex items-center space-x-2 focus:outline-none group"
+            >
+              <img
+                src="./assets/ubongoKids/koba-icon.png"
+                alt="User"
+                class="w-10 h-10 rounded-full border-2 border-gray-600 group-hover:border-indigo-400 object-cover"
+              />
+            </button>
+
+            <!-- Dropdown -->
+
+            <div
+              id="userMenu"
+              class="hidden absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50"
+            >
+              <!-- home  -->
+              <a
+                href="./userDashboard.html"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Home
+              </a>
+              <!-- Profile -->
+              <a
+                href="./editProfile.html"
+                class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+              >
+                Profile
+              </a>
+
+              <!-- About Us with submenu -->
+              <div class="relative">
+                <button
+                  class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 toggle-btn"
+                >
+                  About Us ▾
+                </button>
+
+                <!-- Submenu (flowing) -->
+                <div class="hidden submenu bg-white rounded-lg py-2 mt-1">
+                  <a
+                    href="./aboutUs.html"
+                    class="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+                  >
+                    Description
+                  </a>
+
+                  <!-- More submenu -->
+                  <div>
+                    <button
+                      class="w-full text-left block px-4 py-2 text-gray-700 hover:bg-gray-100 toggle-btn"
+                    >
+                      More ▾
+                    </button>
+
+                    <!-- Nested submenu -->
+                    <div class="hidden submenu bg-white rounded-lg py-2 mt-1">
+                      <a
+                        href="#"
+                        class="block px-4 py-2 text-red-600 hover:bg-red-100"
+                      >
+                        Delete Account
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-t my-1"></div>
+
+              <!-- Logout -->
+              <a href="#" class="block px-4 py-2 text-red-600 hover:bg-red-100">
+                Logout
+              </a>
+            </div>
+          </div>
+        </div>
+        <button
+          class="hidden text-white focus:outline-none"
+          id="mobile-menu-button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu with sliding animation -->
+      <div
+        class="md:hidden absolute top-full left-0 right-0 bg-gray-900 shadow-lg transform origin-top transition-all duration-300 ease-out scale-y-0 -translate-y-full z-30"
+        id="mobile-menu"
+      >
+        <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Home</a
+          >
+          <a
+            href="#"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Shows</a
+          >
+          <!-- <a
+            href="./login.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >Login</a
+          >
+          <a
+            href="./signUp.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-gray-700 hover:text-yellow-200 transition"
+            >SignUp</a
+          > -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="text-white font-sans w-full">
+      <div
+        class="p-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
+      >
+        <!-- Left: Welcome text -->
+        <div class="text-white text-2xl font-semibold">
+          Welcome, <span>Abdil Kadir</span>
+        </div>
+
+        <!-- Right: Search with Filter -->
+        <div class="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
+          <!-- Filter Dropdown -->
+          <select
+            class="bg-gray-700 text-white px-3 py-2 rounded-lg border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"
+          >
+            <option value="">All</option>
+            <option value="ubongo">Ubongo kids</option>
+            <option value="akili">Akili & Me</option>
+            <option value="nozu">Nuzo & Namia</option>
+          </select>
+
+          <!-- Search Input -->
+          <!-- <div
+            class="flex items-center bg-gray-700 rounded-lg border border-gray-600 focus-within:ring-2 focus-within:ring-indigo-500 w-full sm:w-64"
+          >
+            <input
+              type="text"
+              placeholder="Search..."
+              class="bg-transparent text-white px-3 py-2 w-full focus:outline-none"
+            />
+            <button class="px-3 text-gray-400 hover:text-white">🔍</button>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- Slider Section -->
+      <div class="mx-auto px-4 space-y-10 w-full">
+        <!-- Hardcoded Sections -->
+        <div class="space-y-10 w-full mx-auto">
+          <!-- Repeat for Each Section -->
+          <div class="">
+            <h3 class="text-xl font-semibold">Ubongo Kids</h3>
+            <!-- season  -->
+            <div
+              class="py-4 flex flex-col md:flex-row items-start md:items-center justify-start gap-3 text-white"
+            >
+              <div>
+                <p class="text-xl text-[#fcc5cf]">Seasons :</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <!-- Prev Button -->
+                <div>
+                  <button class="p-2 rounded-lg hover:bg-gray-700">
+                    <i class="ri-arrow-left-s-line text-2xl"></i>
+                  </button>
+                </div>
+
+                <!-- Seasons -->
+                <div class="flex gap-2 overflow-hidden w-[160px]">
+                  <button class="px-3 py-1 rounded-lg bg-indigo-500">1</button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    3
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    4
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    5
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    6
+                  </button>
+                </div>
+
+                <!-- Next Button -->
+                <div>
+                  <button class="p-2 rounded-lg hover:bg-gray-700">
+                    <i class="ri-arrow-right-s-line text-2xl"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative pointer-events-none">
+              <button
+                onclick="scrollSliderLeft('Saladina')"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10094;
+              </button>
+              <div
+                id="Saladina"
+                class="slider flex space-x-4 overflow-x-auto pointer-events-auto py-2"
+              >
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/6.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/10.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/9.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/5.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/4.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/2.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <button
+                onclick="scrollRight('Saladina')"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+
+          <!-- Repeat other sections similarly -->
+          <div class="">
+            <h3 class="text-xl font-semibold">Akili & Me</h3>
+            <!-- season  -->
+            <div
+              class="py-4 flex flex-col md:flex-row items-start md:items-center justify-start gap-3 text-white"
+            >
+              <div>
+                <p class="text-xl text-[#fcc5cf]">Seasons :</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <!-- Prev Button -->
+                <div>
+                  <button class="p-2 rounded-lg hover:bg-gray-700">
+                    <i class="ri-arrow-left-s-line text-2xl"></i>
+                  </button>
+                </div>
+
+                <!-- Seasons -->
+                <div class="flex gap-2 overflow-hidden w-[160px]">
+                  <button class="px-3 py-1 rounded-lg bg-indigo-500">1</button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    3
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    4
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    5
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    6
+                  </button>
+                </div>
+
+                <!-- Next Button -->
+                <div>
+                  <button class="p-2 rounded-lg hover:bg-gray-700">
+                    <i class="ri-arrow-right-s-line text-2xl"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative pointer-events-none">
+              <button
+                onclick="scrollSliderLeft('akili')"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10094;
+              </button>
+              <div
+                id="akili"
+                class="slider flex space-x-4 overflow-x-auto py-2 pointer-events-auto"
+              >
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/1.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/home.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/10.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/9.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/8.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/7.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <button
+                onclick="scrollRight('akili')"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+
+          <div class="">
+            <h3 class="text-xl font-semibold">Nuzo & Namia</h3>
+            <!-- season  -->
+            <div
+              class="py-4 flex flex-col md:flex-row items-start md:items-center justify-start gap-3 text-white"
+            >
+              <div>
+                <p class="text-xl text-[#fcc5cf]">Seasons :</p>
+              </div>
+              <div class="flex gap-2 items-center">
+                <!-- Prev Button -->
+                <div>
+                  <button class="p-2 rounded-lg hover:bg-gray-700">
+                    <i class="ri-arrow-left-s-line text-2xl"></i>
+                  </button>
+                </div>
+
+                <!-- Seasons -->
+                <div class="flex gap-2 overflow-hidden w-[160px]">
+                  <button class="px-3 py-1 rounded-lg bg-indigo-500">1</button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    2
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    3
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    4
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    5
+                  </button>
+                  <button
+                    class="px-3 py-1 rounded-lg bg-gray-700 hover:bg-indigo-500"
+                  >
+                    6
+                  </button>
+                </div>
+
+                <!-- Next Button -->
+                <div>
+                  <button class="p-2 rounded-lg hover:bg-gray-700">
+                    <i class="ri-arrow-right-s-line text-2xl"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="relative pointer-events-none">
+              <button
+                onclick="scrollSliderLeft('nuzo')"
+                class="absolute left-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10094;
+              </button>
+              <div
+                id="nuzo"
+                class="slider flex space-x-4 overflow-x-auto py-2 pointer-events-auto"
+              >
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/6.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/5.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/4.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/3.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/2.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div
+                  class="w-full md:w-[300px] h-48 rounded-md overflow-hidden shrink-0 hover:scale-105 duration-300 cursor-pointer"
+                >
+                  <img
+                    src="./assets/1.jpg"
+                    alt="Card Image"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <button
+                onclick="scrollRight('nuzo')"
+                class="absolute right-0 top-1/2 -translate-y-1/2 bg-black bg-opacity-50 px-3 py-2 z-20 pointer-events-auto"
+              >
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-white py-6 px-4">
+      <div class="text-center mt-12">
+        <p class="text-lg font-semibold">Watch from anywhere anytime 24/7</p>
+        <div class="flex flex-col md:flex-row md:justify-between px-4">
+          <div>
+            <h2 class="text-4xl font-bold mt-2 text-yellow-400">SaladinaTV</h2>
+            <div class="flex justify-center items-center space-x-6 mt-4">
+              <a href="#" aria-label="Facebook">
+                <img
+                  src="./assets/facebook.png"
+                  alt="Facebook"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a href="#" aria-label="Instagram">
+                <img
+                  src="./assets/instagram.png"
+                  alt="Instagram"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <img
+                  src="./assets/linkedin.png"
+                  alt="LinkedIn"
+                  class="w-6 h-6"
+                />
+              </a>
+              <a href="#" aria-label="twitter">
+                <img src="./assets/twitter.png" alt="X" class="w-6 h-6" />
+              </a>
+              <a href="#" aria-label="YouTube">
+                <img src="./assets/youtube.png" alt="YouTube" class="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+          <div class="flex justify-center mt-6 space-x-4">
+            <a href="#">
+              <img
+                src="./assets/app-store.png"
+                alt="Download on the App Store"
+                class="h-10 w-32 object-contain rounded-md border-2 border-gray-300 hover:scale-105 transform duration-300"
+              />
+            </a>
+
+            <a href="#">
+              <img
+                src="./assets/google-play-store.png"
+                class="h-30 w-32 object-contain rounded-md border-2 border-gray-300 hover:scale-105 transform duration-300"
+                alt="Google Play"
+              />
+            </a>
+          </div>
+        </div>
+        <div
+          class="flex gap-3 md:gap-6 md:justify-center flex-col md:flex-row justify-start mt-5"
+        >
+          <a href="#" class="hover:underline underline-offset-4"
+            >Privacy Policy</a
+          >
+          <a href="#" class="hover:underline underline-offset-4"
+            >Terms And Condition</a
+          >
+          <a href="#" class="hover:underline underline-offset-4">About Us</a>
+        </div>
+        <div class="mt-5">
+          <p>
+            <span><i class="ri-copyright-line"></i> </span>Copyright 2025
+            Saladina <span>|</span> All Rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll JS -->
+    <script src="./index.js"></script>
+  </body>
+</html>
